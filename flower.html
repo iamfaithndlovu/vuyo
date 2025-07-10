@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Flower for You 🌷</title>
+  <style>
+    body {
+      background: #1a1a2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      flex-direction: column;
+      font-family: 'Courier New', Courier, monospace;
+      color: #ffccdd;
+    }
+
+    .flower {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    .petal {
+      width: 60px;
+      height: 60px;
+      background: #ff69b4;
+      position: absolute;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .petal:nth-child(1) { top: 0; left: 20px; }
+    .petal:nth-child(2) { top: 20px; left: 0; }
+    .petal:nth-child(3) { top: 20px; right: 0; }
+    .petal:nth-child(4) { bottom: 0; left: 20px; }
+
+    .center {
+      width: 40px;
+      height: 40px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    a {
+      margin-top: 3rem;
+      color: #ff6f91;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>This flower is just for you 💐</h1>
+  <div class="flower">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="center"></div>
+  </div>
+  <h1>my leader and my leader?</h1>
+  <a href="index.html">← Back to my letter</a>
+</body>
+</html>
