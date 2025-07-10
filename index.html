@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Veepresh, Ntando and Tshego 💌</title>
+  <style>
+    body {
+      background: #1a1a2e;
+      color: #ffccdd;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #ff6f91;
+    }
+
+    #letter {
+      border: 1px dashed #ff6f91;
+      padding: 2rem;
+      font-size: 1.2rem;
+      white-space: pre-wrap;
+      background: #222244;
+      min-height: 200px;
+    }
+
+    .heart {
+      color: #ff4d6d;
+      font-size: 2rem;
+      position: absolute;
+      animation: float 5s infinite ease-in;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-800px) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>To Veepresh, Ntando and Tshego 💖</h1>
+  <div id="letter"></div>
+
+  <script>
+    const message = `
+
+: My leader and crew
+
+so bafethu i dont have anything to say, harde but i love yall.
+
+.
+
+love you with the love of the L-rd 
+Your biggest supporter
+
+Faith 💕
+
+    `;
+    let i = 0;
+    const speed = 50;
+    function typeWriter() {
+      if (i < message.length) {
+        document.getElementById("letter").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    typeWriter();
+
+    // Floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = `${Math.random() * window.innerWidth}px`;
+      heart.style.top = `${window.innerHeight}px`;
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 500);
+  </script>
+</body>
+<a href="flower.html" style="display: block; text-align: center; font-size: 1.5rem; color: #ff6f91; text-decoration: none; margin-top: 2rem;">
+  🌸 Click here for your valenties flowers 🌸
+</a>
+
+</html>
